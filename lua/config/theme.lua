@@ -1,15 +1,20 @@
 -- active theme
-local THEME = "tokyonight"
+local THEME = "cyberdream"
 
 vim.cmd.colorscheme(THEME)
 print(string.format("Activated colorscheme: %s", THEME))
+
+-- high light
+vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='yellow' })
+vim.api.nvim_set_hl(0, 'LineNr', { fg='yellow', bg='blue', bold=true})
+vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='yellow' })
 
 -- visual
 vim.opt.smarttab = true
 vim.opt.rnu = true
 vim.opt.nu = true
 vim.opt.scrolloff = 99
-vim.opt.tabstop = 4 
+vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
 -- transparent --
