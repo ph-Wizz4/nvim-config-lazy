@@ -19,8 +19,9 @@ return {
 		-- tsconfig
 		lspconfig.ts_ls.setup {
 			on_attach = on_attach,
-		 	-- root_dir = lspconfig.util.root_pattern("package.json", "jsconfig.json", ".git"),
-		 	root_dir = lspconfig.util.root_pattern("package.json", "jsconfig.json"),
+			cmd = {"typescript-language-server", "--stdio"},
+			filetypes ={ "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+			root_dir = lspconfig.util.root_pattern("package.json"),
 		}
 
 		-- lua
