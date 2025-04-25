@@ -16,6 +16,7 @@ vim.opt.nu = true
 vim.opt.scrolloff = 99
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.o.wrap = false
 
 -- transparent --
 vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
