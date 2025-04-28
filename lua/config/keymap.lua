@@ -13,8 +13,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- nav
 -- Terminal mode mappings
 -- Map <Esc> to exit terminal mode
-vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
-
+-- vim.api.nvim_set_keymap('t', '<+>', '<C-\\><C-n>', { noremap = true, silent = true })
 -- Simulate Ctrl-R in terminal mode to insert the character that follows
 vim.api.nvim_set_keymap('t', '<C-R>', [[<C-\><C-N>"..vim.fn.nr2char(vim.fn.getchar())..'pi']], { noremap = true, expr = true, silent = true })
 
