@@ -76,4 +76,12 @@ return {
 			})
 		end
 	},
+
+	-- pug lsp
+	{ "opa-oz/pug-lsp", config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end
+	}
 }
