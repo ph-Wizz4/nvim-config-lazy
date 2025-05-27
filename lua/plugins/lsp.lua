@@ -19,8 +19,10 @@ return {
 		-- tsconfig
 		lspconfig.ts_ls.setup {
 			on_attach = on_attach,
-			root_dir = lspconfig.util.root_pattern("package.json", "jsconfig.json", ".git"),
+		 	-- root_dir = lspconfig.util.root_pattern("package.json", "jsconfig.json", ".git"),
+		 	root_dir = lspconfig.util.root_pattern("package.json", "jsconfig.json"),
 		}
+
 		-- lua
 		lspconfig.lua_ls.setup {
 			on_init = function(client)
@@ -79,6 +81,19 @@ return {
 			},
 			filetypes = { "python", "py", }
 		}
-	end
-},
+
+		-- biome
+		lspconfig.biome.setup{
+			cmd = {"/Users/kenling/.nvm/versions/node/v16.20.2/bin/biome", "lsp-proxy"},  -- Specify the command to run the language server
+			filetypes = { "astro", "css", "graphql", "javascript", "javascriptreact", "json", "jsonc", "svelte", "typescript", "typescript.tsx", "typescriptreact", "vue" },
+			workspace_required = false,
+		 	on_attach = on_attach,
+		 	-- root_dir = lspconfig.util.root_pattern("package.json", "jsconfig.json", ".git"),
+		 	root_dir = lspconfig.util.root_pattern("package.json", "jsconfig.json"),
+		}
+
+		-- biome
+		lspconfig.pug.setup({})
+		end
+	},
 }
