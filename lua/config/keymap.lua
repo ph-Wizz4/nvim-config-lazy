@@ -36,3 +36,6 @@ vim.api.nvim_set_keymap('n', '<A-h>', '<C-w>h', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('n', '<A-j>', '<C-w>j', { noremap = true, silent = true }) -- Move to bottom window
 vim.api.nvim_set_keymap('n', '<A-k>', '<C-w>k', { noremap = true, silent = true }) -- Move to top window
 vim.api.nvim_set_keymap('n', '<A-l>', '<C-w>l', { noremap = true, silent = true }) -- Move to right window
+
+-- Gitsign
+vim.api.nvim_set_keymap('n', '<leader>lb', '<cmd>Gitsign toggle_current_line_blame<CR>', {noremap = true, silent = true })
