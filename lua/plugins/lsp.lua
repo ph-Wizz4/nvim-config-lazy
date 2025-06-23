@@ -84,7 +84,7 @@ return {
 
 		-- biome
 		lspconfig.biome.setup{
-			cmd = {"/Users/kenling/.nvm/versions/node/v16.20.2/bin/biome", "lsp-proxy"},  -- Specify the command to run the language server
+			cmd = {"biome", "lsp-proxy"},  -- Specify the command to run the language server
 			filetypes = { "astro", "css", "graphql", "javascript", "javascriptreact", "json", "jsonc", "svelte", "typescript", "typescript.tsx", "typescriptreact", "vue" },
 			workspace_required = false,
 		 	on_attach = on_attach,
