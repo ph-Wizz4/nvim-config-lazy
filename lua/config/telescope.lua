@@ -11,7 +11,7 @@ end)
 
 vim.keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, {})
 
-vim.keymap.set('v', '<leader>ps', function()
+vim.keymap.set('n', '<leader>pS', function()
 	local selected_text = vim.fn.getreg('"')
     if selected_text == '' then
         print("No text selected!")
