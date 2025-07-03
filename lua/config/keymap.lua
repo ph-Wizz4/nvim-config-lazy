@@ -38,4 +38,8 @@ vim.api.nvim_set_keymap('n', '<A-k>', '<C-w>k', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('n', '<A-l>', '<C-w>l', { noremap = true, silent = true }) -- Move to right window
 
 -- Gitsign
-vim.api.nvim_set_keymap('n', '<leader>lb', '<cmd>Gitsign toggle_current_line_blame<CR>', {noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>lb', '<cmd>Gitsigns toggle_current_line_blame<CR>', {noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>gn', '<cmd>Gitsigns next_hunk<CR>', {noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>gN', '<cmd>Gitsigns prev_hunk<CR>', {noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>gN', '<cmd>Gitsigns prev_hunk<CR>', {noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>rh', '<cmd>Gitsigns reset_hunk<CR>', {noremap = true, silent = true })
