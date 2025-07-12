@@ -34,41 +34,41 @@ return {
 					end
 				end
 
-				client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+				client.config.settings.lua = vim.tbl_deep_extend('force', client.config.settings.lua, {
 					runtime = {
-						-- Tell the language server which version of Lua you're using
-						-- (most likely LuaJIT in the case of Neovim)
-						version = 'LuaJIT'
+						-- tell the language server which version of lua you're using
+						-- (most likely luajit in the case of neovim)
+						version = 'luajit'
 					},
-					-- Make the server aware of Neovim runtime files
+					-- make the server aware of neovim runtime files
 					workspace = {
-						checkThirdParty = false,
+						checkthirdparty = false,
 						library = {
-							vim.env.VIMRUNTIME
-							-- Depending on the usage, you might want to add additional paths here.
+							vim.env.vimruntime
+							-- depending on the usage, you might want to add additional paths here.
 							-- "${3rd}/luv/library"
 							-- "${3rd}/busted/library",
 						}
-						-- or pull in all of 'runtimepath'. NOTE: this is a lot slower and will cause issues when working on your own configuration (see https://github.com/neovim/nvim-lspconfig/issues/3189)
+						-- or pull in all of 'runtimepath'. note: this is a lot slower and will cause issues when working on your own configuration (see https://github.com/neovim/nvim-lspconfig/issues/3189)
 						-- library = vim.api.nvim_get_runtime_file("", true)
 					}
 				})
 			end,
 			settings = {
-				Lua = {}
+				lua = {}
 			}
 		}
 	
 		-- python (project_zwap)
 		lspconfig.pyright.setup{
-			cmd = {"/opt/anaconda3/envs/exp_env/bin/pyright-langserver", "--stdio"},  -- Specify the command to run the language server
-			-- cmd = {"/opt/anaconda3/envs/nvim_pylance_env/bin/pyright-langserver", "--stdio"},  -- Specify the command to run the language server
+			cmd = {"/opt/anaconda3/envs/exp_env/bin/pyright-langserver", "--stdio"},  -- specify the command to run the language server
+			-- cmd = {"/opt/anaconda3/envs/nvim_pylance_env/bin/pyright-langserver", "--stdio"},  -- specify the command to run the language server
 			settings = {
 				python = {
 					analysis = {
-						typeCheckingMode = "basic",
-						autoSearchPath = true,
-						useLibraryCodeForTypes = true,
+						typecheckingmode = "basic",
+						autosearchpath = true,
+						uselibrarycodefortypes = true,
 					},
 					plugins = {
 						flake8 = {enabled = true},
@@ -85,7 +85,7 @@ return {
 
 		-- biome
 		lspconfig.biome.setup{
-			cmd = {"/Users/kenling/.nvm/versions/node/v16.20.2/bin/biome", "lsp-proxy"},  -- Specify the command to run the language server
+			cmd = {"biome", "lsp-proxy"},  -- Specify the command to run the language server
 			filetypes = { "astro", "css", "graphql", "javascript", "javascriptreact", "json", "jsonc", "svelte", "typescript", "typescript.tsx", "typescriptreact", "vue" },
 			workspace_required = false,
 		 	on_attach = on_attach,
