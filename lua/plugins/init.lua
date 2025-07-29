@@ -11,8 +11,6 @@ return {
 	{'nvim-telescope/telescope.nvim', tag = '0.1.8',
 	requires = { {'nvim-lua/plenary.nvim'} },},
 
-	{ 'nvim-treesitter/nvim-treesitter', opts = {}, },
-
 	-- center
 	{ 'smithbm2316/centerpad.nvim' },
 
@@ -39,12 +37,6 @@ return {
 		end,
 	},
 
-	{
-		"lewis6991/gitsigns.nvim",
-		config = function ()
-			require('gitsigns').setup()
-		end,
-	},
 
 	-- noice
 	{

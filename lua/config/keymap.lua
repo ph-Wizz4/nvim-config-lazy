@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 -- lazy
 vim.api.nvim_set_keymap('n', '<leader>l', '<cmd>Lazy<CR>', {noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>pv", "<cmd>Ex<CR>", {noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>pv", "<cmd>Oil<CR>", {noremap = true, silent = true })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -36,10 +36,3 @@ vim.api.nvim_set_keymap('n', '<A-h>', '<C-w>h', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('n', '<A-j>', '<C-w>j', { noremap = true, silent = true }) -- Move to bottom window
 vim.api.nvim_set_keymap('n', '<A-k>', '<C-w>k', { noremap = true, silent = true }) -- Move to top window
 vim.api.nvim_set_keymap('n', '<A-l>', '<C-w>l', { noremap = true, silent = true }) -- Move to right window
-
--- Gitsign
-vim.api.nvim_set_keymap('n', '<leader>lb', '<cmd>Gitsigns toggle_current_line_blame<CR>', {noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>gn', '<cmd>Gitsigns next_hunk<CR>', {noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>gN', '<cmd>Gitsigns prev_hunk<CR>', {noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>gN', '<cmd>Gitsigns prev_hunk<CR>', {noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>rh', '<cmd>Gitsigns reset_hunk<CR>', {noremap = true, silent = true })
