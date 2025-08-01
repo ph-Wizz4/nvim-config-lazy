@@ -1,3 +1,4 @@
+require("config.basic")
 require("config.lazy")
 require("config.theme")
 require("config.keymap")
