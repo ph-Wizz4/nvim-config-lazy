@@ -18,26 +18,39 @@ return  {
 			dapui.close()
 		end
 
-		local port = 9030
+		local node_port = 9030
+		local chrome_port = 9222
 		local JS_DEBUG_HOME = os.getenv("JS_DEBUG_HOME")
+		local node_args = {}
+		local chrome_args = {}
+
+		if JS_DEBUG_HOME and JS_DEBUG_HOME ~= "" then
+			node_args = {JS_DEBUG_HOME .. "/dapDebugServer.js", tostring(node_port)}
+			chrome_args = {JS_DEBUG_HOME .. "/dapDebugServer.js", tostring(chrome_port)}
+		else
+			node_args = {"js-debug", tostring(node_port)}
+			chrome_args = {"js-debug", tostring(chrome_port)}
+		end
+		vim.notify(tostring(node_args), 3)
+
 		dap.adapters["pwa-node"] = {
-			port = 9030,
+			port = node_port,
 			type = "server",
 			host = "localhost",
 			executable = {
 				command = "node",
 				-- 💀 Make sure to update this path to point to your installation
-				args = {JS_DEBUG_HOME .. "/dapDebugServer.js", "9030"},
+				args = node_args,
 			}
 		}
 		dap.adapters["pwa-chrome"] = {
-			port = 9222,
+			port = chrome_port,
 			type = "server",
 			host = "localhost",
 			executable = {
 				command = "node",
 				-- 💀 Make sure to update this path to point to your installation
-				args = {JS_DEBUG_HOME .. "/dapDebugServer.js", "9222"},
+				args = chrome_args,
 			}
 		}
 		dap.configurations.javascript = {
@@ -134,5 +147,5 @@ return  {
 		})
 
 	end
-}
+	}
 }
