@@ -109,6 +109,10 @@ return {
 
 		-- biome
 		lspconfig.pug.setup({})
+
+		-- nix 
+		lspconfig.nixd.setup({})
 		end
+
 	},
 }
