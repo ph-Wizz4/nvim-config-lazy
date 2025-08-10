@@ -5,6 +5,21 @@ return {
 		-- language config
 		local lspconfig = require('lspconfig')
 
+		-- docker
+
+		lspconfig.dockerls.setup {
+		  cmd = { "docker-language-server", "start", "--stdio" },
+		  filetypes = { "Dockerfile", "dockerfile", "yaml.docker-compose", "docker-compose.yml" },
+		  root_dir = lspconfig.util.root_pattern("docker-compose.yml"),
+		  settings = {
+			docker = {
+			  completions = {
+				  enable = true,
+			  }
+			}
+		  }
+		}
+
 		lspconfig.eslint.setup({
 			on_attach = function(client, bufnr)
 				vim.api.nvim_create_autocmd("BufWritePre", {
