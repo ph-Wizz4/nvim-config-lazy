@@ -8,7 +8,7 @@ return {
 		-- docker
 
 		lspconfig.dockerls.setup {
-		  cmd = { "docker-language-server", "start", "--stdio" },
+		  cmd = { "docker-langserver", "--stdio" },
 		  filetypes = { "Dockerfile", "dockerfile", "yaml.docker-compose", "docker-compose.yml" },
 		  root_dir = lspconfig.util.root_pattern("docker-compose.yml"),
 		  settings = {
