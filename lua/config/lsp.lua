@@ -32,3 +32,15 @@ vim.diagnostic.config({
     },
   },
 })
+
+-- enable
+vim.lsp.enable("biome")
+vim.lsp.enable("dockerls")
+vim.lsp.enable("eslint")
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("pug")
+vim.lsp.enable("pyright")
+vim.lsp.enable("tailwindcss")
+vim.lsp.enable("ts_ls")
+
+
