@@ -42,5 +42,5 @@ vim.lsp.enable("pug")
 vim.lsp.enable("pyright")
 vim.lsp.enable("tailwindcss")
 vim.lsp.enable("ts_ls")
-
+vim.lsp.enable('prismals')
 
