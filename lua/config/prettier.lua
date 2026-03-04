@@ -1,7 +1,7 @@
 
 vim.api.nvim_create_user_command("FormatFile", function ()
     local current_file = vim.fn.expand('%:p') -- Get the full path of the current file
-    local handle = io.popen('prettier --write ' .. current_file .. ' 2>&1') -- Run Black on the file
+    local handle = io.popen('prettier --write ' .. string.format('"%s"', current_file) .. ' 2>&1') -- Run Black on the file
     local result = handle:read('*a') -- Read the output
     handle:close()
 
