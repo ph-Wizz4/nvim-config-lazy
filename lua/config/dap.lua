@@ -1,3 +1,5 @@
+-- DAP (Debug Adapter Protocol) configuration
+-- Plugin: mfussenegger/nvim-dap, rcarriga/nvim-dap-ui
 vim.api.nvim_set_keymap('n', '<leader>b', "<cmd>lua require('dap').toggle_breakpoint()<CR>", {silent = true, noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>5', "<cmd>lua require('dap').continue()<CR>", {silent = true, noremap = true})
 

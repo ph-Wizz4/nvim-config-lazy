@@ -1,3 +1,5 @@
+-- Catppuccin theme integration
+-- Plugin: catppuccin/nvim
 require("catppuccin").setup({
     integrations = {
         cmp = true,

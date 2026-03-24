@@ -1,3 +1,5 @@
+-- Noice (UI enhancement) configuration
+-- Plugin: folke/noice.nvim
 require("noice").setup({
   lsp = {
     override = {

@@ -1,3 +1,5 @@
+-- lualine (status line) configuration
+-- Plugin: nvim-lualine/lualine.nvim
 require('lualine').setup {
   options = {
     icons_enabled = true,

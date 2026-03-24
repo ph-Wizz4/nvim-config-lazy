@@ -1,3 +1,5 @@
+-- Obsidian configuration and keymaps
+-- Plugin: obsidian-nvim/obsidian.nvim
 -- const
 
 local OBSIDIAN_VAULT = os.getenv("OBSIDIAN_VAULT")

@@ -1,3 +1,6 @@
+-- LSP configuration and keymaps
+-- Plugin: neovim/nvim-lspconfig
+-- Enables built-in LSP for multiple languages
 
 -- remap
 vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })

@@ -1,4 +1,5 @@
-
+-- Prettier formatting configuration
+-- Plugin: MunifTanjim/prettier.nvim, jose-elias-alvarez/null-ls.nvim
 vim.api.nvim_create_user_command("FormatFile", function ()
     local current_file = vim.fn.expand('%:p') -- Get the full path of the current file
     local handle = io.popen('prettier --write ' .. string.format('"%s"', current_file) .. ' 2>&1') -- Run Black on the file
