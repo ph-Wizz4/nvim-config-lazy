@@ -1,5 +1,7 @@
+-- nvim-cmp: Completion framework
+-- Requires: nvim-lspconfig (cmp-nvim-lsp source)
+-- Related: config/auto_complete.lua (configuration)
 return {
-	-- Autocompletion framework
 	{ 'hrsh7th/nvim-cmp' },
 	{ 'hrsh7th/cmp-nvim-lsp'},
 	{ 'hrsh7th/cmp-buffer'},

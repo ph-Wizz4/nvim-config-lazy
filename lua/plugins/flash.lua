@@ -1,3 +1,4 @@
+-- flash.nvim: Enhanced motion/search
 return {
   "folke/flash.nvim",
   event = "VeryLazy",

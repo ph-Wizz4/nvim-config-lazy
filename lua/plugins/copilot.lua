@@ -1,3 +1,6 @@
+-- CopilotChat.nvim: AI chat interface
+-- Requires: copilot.vim or copilot.lua
+-- Related: config/copilot.lua (keymaps and settings)
 return {
   {
     "CopilotC-Nvim/CopilotChat.nvim",
