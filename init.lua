@@ -15,7 +15,6 @@ require("config.lsp")
 require("config.treesitter")
 require("config.prettier")
 require("config.auto_complete")
-require("config.dap")
 
 require("config.lazy_git")
 require("config.gitsign")
