@@ -1,3 +1,5 @@
+-- gitsigns.nvim: Git integration
+-- Related: config/gitsign.lua (keymaps)
 return {
     {
         "lewis6991/gitsigns.nvim",

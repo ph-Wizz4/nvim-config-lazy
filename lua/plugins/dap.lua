@@ -1,3 +1,5 @@
+-- nvim-dap: Debug Adapter Protocol
+-- Related: config/dap.lua (signs configuration)
 return  {
 	{ "rcarriga/nvim-dap-ui",
 	dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"},

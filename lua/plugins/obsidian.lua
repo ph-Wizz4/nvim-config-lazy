@@ -1,3 +1,6 @@
+-- obsidian.nvim: Obsidian note-taking app integration
+-- Requires: plenary.nvim
+-- Related: config/obsidian.lua (keymaps)
 return {
   "obsidian-nvim/obsidian.nvim",
   version = "*",  -- recommended, use latest release instead of latest commit

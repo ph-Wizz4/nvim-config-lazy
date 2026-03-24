@@ -1,3 +1,5 @@
+-- oil.nvim: File explorer (netrw alternative)
+-- Related: core/keymaps.lua (keymap: <leader>pv to open oil)
 return {
 	{ 'stevearc/oil.nvim',
 		---@module 'oil'
