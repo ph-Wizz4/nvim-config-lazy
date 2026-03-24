@@ -1,3 +1,5 @@
+-- Telescope keymaps and configuration
+-- Plugin: nvim-telescope/telescope.nvim
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})

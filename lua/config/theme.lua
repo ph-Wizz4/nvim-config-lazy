@@ -1,3 +1,5 @@
+-- Theme/colorscheme configuration
+-- Plugin: scottmckendry/cyberdream.nvim
 local THEME = "cyberdream"
 
 vim.cmd.colorscheme(THEME)

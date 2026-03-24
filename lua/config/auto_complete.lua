@@ -1,3 +1,5 @@
+-- nvim-cmp configuration
+-- Plugin: hrsh7th/nvim-cmp
 local cmp = require('cmp')
 
 cmp.setup({

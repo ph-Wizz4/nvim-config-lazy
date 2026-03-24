@@ -1,3 +1,5 @@
+-- toggleterm configuration
+-- Plugin: akinsho/toggleterm.nvim
 require("toggleterm").setup({
     open_mapping = [[<c-j>]],  -- Key mapping to toggle the terminal
     shade_filetypes = {},

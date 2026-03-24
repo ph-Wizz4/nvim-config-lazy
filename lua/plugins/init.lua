@@ -8,7 +8,6 @@ return {
 	-- general
 	{ "folke/todo-comments.nvim", opts = {}, },
 	{ "echasnovski/mini.pairs", opts = {}, },
-	{ "akinsho/toggleterm.nvim", opts = {}, },
 
 	-- theme
 	{"scottmckendry/cyberdream.nvim", opts = {},},
