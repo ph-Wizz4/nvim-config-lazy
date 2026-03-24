@@ -4,7 +4,7 @@ This repository contains my personal Neovim configuration. It's tailored to my w
 
 ## Prerequisites
 
-- Neovim (version 0.8 or higher recommended)
+- Neovim (version 0.11.6 or higher recommended)
 - Git (to clone this repository)
 
 ## Project Structure
