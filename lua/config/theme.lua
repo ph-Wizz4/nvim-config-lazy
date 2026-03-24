@@ -4,8 +4,8 @@ local THEME = "cyberdream"
 
 vim.cmd.colorscheme(THEME)
 
--- transparent
-vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
-vim.cmd([[hi NonText guibg=NONE ctermbg=NONE]])
-vim.cmd([[hi NormalNC guibg=NONE ctermbg=NONE]])
+local set_highlight = require('core.highlights');
+
+set_highlight()
+
 print(string.format("Activated colorscheme: %s", THEME))
