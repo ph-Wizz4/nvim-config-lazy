@@ -1,4 +1,4 @@
--- lualine (status line) configuration
+-- status_line (lualine) configuration
 -- Plugin: nvim-lualine/lualine.nvim
 require('lualine').setup {
   options = {
