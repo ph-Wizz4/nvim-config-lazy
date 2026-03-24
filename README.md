@@ -56,7 +56,6 @@ Set the following environment variables if needed:
 
 ```shell
 OBSIDIAN_VAULT    # Path to your Obsidian vault
-JS_DEBUG_HOME     # Path to JavaScript debug configuration
 ```
 
 ### Custom Target
