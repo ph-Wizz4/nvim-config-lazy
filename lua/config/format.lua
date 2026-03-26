@@ -44,14 +44,21 @@ local function format_file(filetype)
 	end
 
 	local current_file = vim.fn.expand("%:p")
-	local handle = io.popen(build_cmd(formatter, current_file))
-	local result = handle:read("*a")
+	local cmd = build_cmd(formatter, current_file) .. " && echo 'SUCCESS' || echo 'FAILED'"
+	local handle = io.popen(cmd)
+	local output = handle:read("*a")
 	handle:close()
+	local success = output:match("SUCCESS") ~= nil
 
-	if result == "" then
-		print("File formatted successfully with " .. formatter.cmd)
+	if success then
+		print("Formatted with " .. formatter.cmd)
 	else
-		print("Error formatting file:\n" .. result)
+		local err = output:gsub("SUCCESS", ""):gsub("FAILED", ""):match("^%s*(.-)%s*$")
+		if err and err ~= "" then
+			print("Error: " .. err)
+		else
+			print("Failed to format with " .. formatter.cmd)
+		end
 	end
 
 	vim.cmd("edit")
@@ -81,14 +88,24 @@ local function format_range(start_line, end_line, filetype)
 	local lines = vim.fn.getline(start_line, end_line)
 	vim.fn.writefile(lines, temp_file_ext)
 
-	local handle = io.popen(build_cmd(formatter, temp_file_ext))
+	local cmd = build_cmd(formatter, temp_file_ext) .. " && echo 'SUCCESS' || echo 'FAILED'"
+	local handle = io.popen(cmd)
+	local output = handle:read("*a")
 	handle:close()
+	local success = output:match("SUCCESS") ~= nil
+
+	if not success then
+		local err = output:gsub("SUCCESS", ""):gsub("FAILED", ""):match("^%s*(.-)%s*$")
+		print("Error: " .. (err or "format failed"))
+		os.remove(temp_file_ext)
+		return
+	end
 
 	local formatted_lines = vim.fn.readfile(temp_file_ext)
 	vim.fn.setline(start_line, formatted_lines)
 	os.remove(temp_file_ext)
 
-	print("Selected range formatted with " .. formatter.cmd)
+	print("Formatted range with " .. formatter.cmd)
 end
 
 vim.api.nvim_create_user_command("FormatFile", function()
