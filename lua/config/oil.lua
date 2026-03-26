@@ -21,5 +21,8 @@ require("oil").setup({
     -- Preview split direction: "auto", "left", "right", "above", "below"
     preview_split = "left",
   },
+  view_options = {
+    show_hidden = true,
+  },
 })
 
