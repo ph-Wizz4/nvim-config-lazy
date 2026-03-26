@@ -23,3 +23,11 @@ vim.api.nvim_set_keymap('n', '<A-l>', '<C-w>l', { noremap = true, silent = true 
 
 vim.api.nvim_set_keymap('n', '<leader>c', "<cmd>lua require'centerpad'.toggle{ leftpad = 40, rightpad = 40 }<cr>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>l', '<cmd>Lazy<CR>', {noremap = true, silent = true })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "oil",
+  callback = function()
+    vim.keymap.set("n", "q", "<cmd>close<CR>", { buffer = true, desc = "Close Oil" })
+    vim.keymap.set("n", "<Esc>", "<cmd>close<CR>", { buffer = true, desc = "Close Oil" })
+  end,
+})
