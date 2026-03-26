@@ -1,5 +1,5 @@
 -- nvim-lspconfig: Core LSP support
--- Related: config/lsp.lua (configuration), config/project_zwap/python_lsp.lua
+-- Related: config/lsp.lua (configuration), config.format
 return {
 	{ 'neovim/nvim-lspconfig', },
 }

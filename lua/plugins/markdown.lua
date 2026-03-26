@@ -1,6 +1,6 @@
 -- render-markdown.nvim
 -- Requires: nvim-treesitter (for markdown parsing)
--- Related: config/prettier.lua (formatting)
+-- Related: config.format (formatting)
 return {
 	{
 		'MeanderingProgrammer/render-markdown.nvim',

@@ -13,7 +13,7 @@ require("config.noice")
 
 require("config.lsp")
 require("config.treesitter")
-require("config.prettier")
+require("config.format")
 require("config.auto_complete")
 
 require("config.lazy_git")
