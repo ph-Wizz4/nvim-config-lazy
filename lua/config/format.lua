@@ -3,6 +3,7 @@ local M = {}
 
 local formatters = {
 	python = { cmd = "black", check = "black", write_flag = false },
+	go = { cmd = "go fmt", check = "go", write_flag = false },
 }
 
 local prettier_ext = {
