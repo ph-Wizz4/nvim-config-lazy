@@ -2,5 +2,5 @@
 -- Related: config/treesitter.lua (configuration)
 -- Related: plugins/markdown.lua (requires treesitter for markdown)
 return {
-  {"nvim-treesitter/nvim-treesitter", branch = 'master', lazy = true, build = ":TSUpdate"}
+  {"nvim-treesitter/nvim-treesitter", branch = 'main', lazy = false, build = ":TSUpdate"}
 }
