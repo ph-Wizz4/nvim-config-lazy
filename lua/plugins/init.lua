@@ -14,7 +14,7 @@ return {
 	{ "folke/tokyonight.nvim", opts = {},},
 
 	-- tools
-	{'nvim-telescope/telescope.nvim', tag = '0.1.8',
+	{'nvim-telescope/telescope.nvim', tag = 'v0.2.1',
 	requires = { {'nvim-lua/plenary.nvim'} },},
 	{ 'smithbm2316/centerpad.nvim' },
 
