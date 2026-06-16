@@ -2,6 +2,6 @@
 -- Related: config.format (configuration)
 -- Related: plugins/markdown.lua (markdown rendering)
 return {
-	{ 'jose-elias-alvarez/null-ls.nvim' },
+	{ 'nvimtools/none-ls.nvim' },
 	{ 'MunifTanjim/prettier.nvim' },
 }
