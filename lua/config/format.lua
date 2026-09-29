@@ -14,6 +14,7 @@ local prettier_ext = {
 	html = ".html",
 	css = ".css",
 	json = ".json",
+	jsonc = ".jsonc",
 	yaml = ".yaml",
 	markdown = ".md",
 }
